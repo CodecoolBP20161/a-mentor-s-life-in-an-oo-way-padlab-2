@@ -16,7 +16,7 @@ Person
   * data type: integer
   * description: stores the person's play skill(1-10)
 
-* ```is_bet_on_surprise_result```
+* ```is_bet_on_expected_result```
   * data type: boolean
   * description: stores what does the person bet on
 
@@ -52,25 +52,5 @@ if he did: observes self.is_bet_on_surprise_result and match.is_surprising
 #### Arguments
 self, match
 
-### ```change_knowledge_level```
-
-Changes of the knowledge level of the student by 10.
-
-
-#### Arguments
-none
-
 #### Return value
-none
-
-
-### ```change_energy_level```
-
-Changes of the energy level of the student by 10.
-
-
-#### Arguments
-none
-
-#### Return value
-none
+None
