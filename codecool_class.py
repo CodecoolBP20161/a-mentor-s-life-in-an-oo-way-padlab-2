@@ -15,7 +15,7 @@ class CodecoolClass:
                 return student
         raise ValueError("No student found by the given name")
 
-    def find_student_by_full_name(self, fullname):
+    def find_mentor_by_full_name(self, fullname):
         for mentor in self.mentors:
             if mentor[0] == fullname.split(' ')[0] and mentor[1] == fullname.split(' ')[1]:
                 return mentor
