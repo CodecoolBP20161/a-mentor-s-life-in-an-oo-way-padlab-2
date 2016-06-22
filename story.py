@@ -12,7 +12,7 @@ codecool_bp = CodecoolClass.create_local
 all_students = codecool_bp.students
 all_mentors = codecool_bp.mentors
 all_matches = Match.generate_list('matches.csv')
-table_football_matches = TableFootballMatch.generate_list()
+table_football_matches = TableFootballMatch.generate_list('tablefootball.csv')
 all_dojos = Dojo.generate_list()
 all_projects = Projects.generate_list()
 

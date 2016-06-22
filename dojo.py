@@ -9,10 +9,10 @@ class Dojo(Exercise):
 
     def solved(self, student):
 
-        chance_to_solve = (float(self.difficulty_level) + float(student.knowledge_level)) / float(student.knowledge_level)
+        chance_to_solve =float(student.knowledge_level) / (float(self.difficulty_level) + float(student.knowledge_level))
         percent_according_to_knowledge = int(chance_to_solve*100)
         bad_luck_factor = random.randint(1, 100)
         if bad_luck_factor < percent_according_to_knowledge:
-            student.morale += self.difficulty_level
+            student.energy_level += self.difficulty_level
         else:
-            student.morale -= 100 - self.difficulty_level
+            student.energy_level -= 100 - self.difficulty_level
