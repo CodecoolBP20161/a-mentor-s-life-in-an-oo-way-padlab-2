@@ -20,18 +20,19 @@ Person
 
 ### ```__init__```
 
-  The constructor of the object.
+    The constructor of the object.
 
 #### Arguments
 
-  All of the arguments of the class itself.
+    All of the arguments of the class itself.
 
 #### Return value
-  None
+
+    None
 
 ### ```slap```
 
-Slap the student thus increasing its knowledge level.
+Slap the student thus increasing its energy level.
 
 #### Arguments
 
@@ -42,7 +43,7 @@ student object
 
 ### ```teach```
 
-    Teaches the student thus increasing its knowledge level and its energy level.
+    Teaches the student thus increasing its knowledge level but decreasing its energy level.
 
 #### Arguments
 
@@ -50,32 +51,49 @@ student object
 
 #### Return value
 
-        None
-
-### ```decide```
-
-    Decides between slap and teach.
-
-#### Arguments
-
     None
 
-#### Return value
-
-    teach method or slap method
 
 
 
 ## Class methods
 
-### ```choose```
+### ```feedback```
 
-    Chooses a mentor to do something.
+    The mentors give positive feedback to the whole class thus increasing every students energy.
 
 #### Arguments
 
-    generated list of mentors
+    Codecool class
 
 #### Return value
 
-    Mentor(Object)
+    None
+
+
+
+## Static methods
+
+### ```check_knowledge```
+
+    Determines the average knowledge level in class.
+
+#### Arguments
+
+    list of students
+
+#### Return value
+
+    float
+
+### ```check_energy```
+
+    Determines the average energy level in class.
+
+#### Arguments
+
+    list of students
+
+#### Return value
+
+    float
