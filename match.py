@@ -15,7 +15,7 @@ class Match:
         with open("data/" + file_name) as csvfile:
             matches = csv.reader(csvfile)
             for row in matches:
-                a_match = Match(row[0], row[1], row[2])
+                a_match = Match(row[0], bool(row[1]), int(row[2]))
                 all_matches.append(a_match)
         return all_matches
 
