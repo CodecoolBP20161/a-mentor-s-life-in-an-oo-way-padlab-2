@@ -37,3 +37,4 @@ for day in days_of_the_week:
         played_table_football_match.played(observed_class)
         actual_project = random.choice(all_projects)
         actual_project.worked_on()
+    Mentor.feedback(observed_class)

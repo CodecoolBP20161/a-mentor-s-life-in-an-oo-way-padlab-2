@@ -32,22 +32,22 @@ Person
 
 ### ```slap```
 
-Slap the student thus increasing its energy level.
+    Slap students thus increasing their energy level.
 
 #### Arguments
 
-student object
+    list of student objects
 
 #### Return value
     None
 
 ### ```teach```
 
-    Teaches the student thus increasing its knowledge level but decreasing its energy level.
+    Teaches students thus increasing their knowledge level but decreasing their energy level.
 
 #### Arguments
 
-    student object
+    list of student objects
 
 #### Return value
 

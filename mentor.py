@@ -17,8 +17,8 @@ class Mentor(Person):
         student.energy_level -= 5
 
     @classmethod
-    def feedback(cls, a):
-        for student in a.students:
+    def feedback(cls, cc_class):
+        for student in cc_class.students:
             student.energy_level += 15
 
     @classmethod
