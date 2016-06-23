@@ -17,7 +17,7 @@ class TableFootballMatch:
         with open("data/" + file_name) as csvfile:
             matches = csv.reader(csvfile)
             for row in matches:
-                one_match = TableFootballMatch(row[0], row[1], row[2])
+                one_match = TableFootballMatch(bool(row[0]), bool(row[1]), row[2])
                 all_matches.append(one_match)
         return all_matches
 
