@@ -22,5 +22,5 @@ class CodecoolClass:
         raise ValueError("No mentor found by the given name")
 
     @classmethod
-    def generate_local():
+    def generate_local(cls):
         return CodecoolClass("Budapest", 2016, "/data/mentors.csv", "/data/students.csv")
