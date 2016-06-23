@@ -90,7 +90,7 @@ student object
 
 ### ```check_knowledge```
 
-    Determines the average knowledge level in class.
+    Determines the average knowledge level in class, and returns the students who are below that by a certain amount.
 
 #### Arguments
 
@@ -98,11 +98,12 @@ student object
 
 #### Return value
 
-    float
+    list of students
+
 
 ### ```check_energy```
 
-    Determines the average energy level in class.
+    Determines the average energy level in class, and returns the students who are below that by a certain amount.
 
 #### Arguments
 
@@ -110,4 +111,4 @@ student object
 
 #### Return value
 
-    float
+    list of students
