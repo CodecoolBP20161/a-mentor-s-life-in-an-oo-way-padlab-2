@@ -23,4 +23,4 @@ class CodecoolClass:
 
     @classmethod
     def generate_local():
-        return __init__("Budapest", 2016, "/data/mentors.csv", "/data/students.csv")
+        return CodecoolClass("Budapest", 2016, "/data/mentors.csv", "/data/students.csv")
