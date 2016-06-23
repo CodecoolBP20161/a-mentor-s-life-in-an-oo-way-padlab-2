@@ -13,7 +13,7 @@ class Exercise():
 
         list_of_exercises = []
 
-        with open(file_name) as csvfile:
+        with open('data/' + file_name) as csvfile:
             all_exercises = csv.reader(csvfile)
             for exercise in all_exercises:
                 exercise_object = Exercise(exercise[0], exercise[1])

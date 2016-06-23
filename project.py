@@ -1,3 +1,5 @@
+from exercise import Exercise
+
 class Project(Exercise):
 
     def __init__(self, exercise_name, difficulty_level, ):
@@ -6,5 +8,4 @@ class Project(Exercise):
         self.difficulty_level = difficulty_level
 
     def worked_on(self):
-
-        
+        pass

@@ -13,7 +13,7 @@ class Student(Person):
         self.energy_level = energy_level
 
     def bet(self, match):
-        if match.important = False:
+        if match.important == False:
             if self.depend_level == "never" or self.depend_level == "only_interesting":
                 if self.is_bet_on_expected_result == was_it_expected:
                     self.energy_level -= 50
@@ -25,7 +25,7 @@ class Student(Person):
                 else:
                     self.energy_level -= 100
 
-        if match.important = True:
+        if match.important == True:
             if self.depend_level == "never":
                 if self.is_bet_on_expected_result == was_it_expected:
                     self.energy_level -= 50

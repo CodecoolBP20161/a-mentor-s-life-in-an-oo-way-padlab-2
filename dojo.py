@@ -1,4 +1,5 @@
 import random
+from exercise import Exercise
 
 class Dojo(Exercise):
 

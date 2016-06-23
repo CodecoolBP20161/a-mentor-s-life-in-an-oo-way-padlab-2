@@ -2,19 +2,19 @@ from codecool_class import CodecoolClass
 from mentor import Mentor
 from student import Student
 from match import Match
-from table_football_matches import TableFootballMatch
+from tablefootball import TableFootballMatch
 from dojo import Dojo
 from project import Project
 
-codecool_bp = CodecoolClass.create_local
+codecool_bp = CodecoolClass.generate_local()
 
 # for random:
 all_students = codecool_bp.students
 all_mentors = codecool_bp.mentors
 all_matches = Match.generate_list('matches.csv')
 table_football_matches = TableFootballMatch.generate_list('tablefootball.csv')
-all_dojos = Dojo.generate_list()
-all_projects = Projects.generate_list()
+all_dojos = Dojo.generate_list('dojos.csv')
+all_projects = Projects.generate_list('projects.csv')
 
 days_of_the_week = (Monday, Tuesday, Wednesday, Thursday, Friday)
 
