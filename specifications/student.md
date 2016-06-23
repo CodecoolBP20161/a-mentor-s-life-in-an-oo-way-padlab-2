@@ -28,7 +28,18 @@ Person
   * data type: integer
   * description: stores energy level of the student
 
+##Class methods
 
+### ```generate_list```
+
+Creates a list, with all the students in it.
+
+#### Arguments
+csv file
+
+#### Return value
+
+A list with all students (objects) in it.
 
 
 ## Instance methods
