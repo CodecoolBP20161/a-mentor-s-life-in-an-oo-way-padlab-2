@@ -39,11 +39,21 @@ class Mentor(Person):
         summ_knowledge = 0
         for student in students:
             summ_knowledge += student.knowledge_level
-        return summ_knowledge/students.length()
+        avg_knowledge = summ_knowledge/students.length()
+        dumbies = []
+        for student in students:
+            if student.knowledge_level < avg_knowledge*0.9:
+                dumbies.append(student)
+        return dumbies
 
     @staticmethod
     def check_energy(students):
         summ_energy = 0
         for student in students:
             summ_energy += student.energy_level
-        return summ_energy/students.length()
+        avg_energy = summ_energy/students.length()
+        lazies = []
+        for student in students:
+            if student.energy_level < avg_energy*0.9:
+                lazies.append(student)
+        return lazies
