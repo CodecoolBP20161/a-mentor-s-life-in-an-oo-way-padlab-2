@@ -33,3 +33,17 @@ class Mentor(Person):
                 list_of_mentors.append(mentor_object)
 
         return list_of_mentors
+
+    @staticmethod
+    def check_knowledge(students):
+        summ_knowledge = 0
+        for student in students:
+            summ_knowledge += student.knowledge_level
+        return summ_knowledge/students.length()
+
+    @staticmethod
+    def check_energy(students):
+        summ_energy = 0
+        for student in students:
+            summ_energy += student.energy_level
+        return summ_energy/students.length()
