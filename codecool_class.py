@@ -2,7 +2,7 @@ from mentor import Mentor
 from student import Student
 
 
-class CodecoolClass:
+class CodecoolClass():
     def __init__(self, location, year, mentors_csv, students_csv):
         self.location = location
         self.year = year
@@ -23,4 +23,4 @@ class CodecoolClass:
 
     @classmethod
     def generate_local(cls):
-        return CodecoolClass("Budapest", 2016, "/data/mentors.csv", "/data/students.csv")
+        return CodecoolClass("Budapest", 2016, "mentors.csv", "students.csv")

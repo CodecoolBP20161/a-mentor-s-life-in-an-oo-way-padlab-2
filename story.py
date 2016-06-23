@@ -5,6 +5,7 @@ from match import Match
 from tablefootball import TableFootballMatch
 from dojo import Dojo
 from project import Project
+import csv
 
 codecool_bp = CodecoolClass.generate_local()
 

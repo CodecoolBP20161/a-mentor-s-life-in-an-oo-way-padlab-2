@@ -1,6 +1,5 @@
 from person import Person
-from student import Student
-from codecool_class import CodecoolClass
+import csv
 
 
 class Mentor(Person):
@@ -8,7 +7,7 @@ class Mentor(Person):
 
         self.nick_name = nickname
         self.slap_rate = slaprate
-        super(Mentor, self).__init__(first_name, last_name, year, gender)
+        super().__init__(first_name, last_name, year, gender)
 
     def slap(self, student):
         student.energy_level += 5*self.slap_rate
@@ -18,10 +17,11 @@ class Mentor(Person):
         student.energy_level -= 5
 
     @classmethod
-    def feedback(cls, class):
-        for student in class.students:
+    def feedback(cls, a):
+        for student in a.students:
             student.energy_level += 15
 
+    @classmethod
     def generate_list(cls, file_name):
 
         list_of_mentors = []
