@@ -21,7 +21,4 @@ class Match:
 
     def expected_result(self):
         x = random.randit(1, 10)
-        if x < self.expectation_probability:
-            return True
-        else:
-            return False
+        return x < self.expectation_probability

@@ -6,7 +6,7 @@ class Mentor(Person):
     def __init__(self, first_name, last_name, year, gender, nickname, slaprate):
 
         self.nick_name = nickname
-        self.slap_rate = slaprate
+        self.slap_rate = int(slaprate)
         super().__init__(first_name, last_name, year, gender)
 
     def slap(self, student):

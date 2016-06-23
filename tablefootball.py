@@ -8,10 +8,9 @@ import random
 class TableFootballMatch:
 
     def __init__(self, proper_time, is_official, players):
-        self.proper_time = proper_time
-        self.is_official = is_official
-        self.players = players
-
+        self.proper_time = bool(proper_time)
+        self.is_official = bool(is_official)
+        self.players = int(players)
 
     @classmethod
     def generate_list(cls, file_name):
@@ -19,7 +18,7 @@ class TableFootballMatch:
         with open("data/" + file_name) as csvfile:
             matches = csv.reader(csvfile)
             for row in matches:
-                one_match = TableFootballMatch(bool(row[0]), bool(row[1]), row[2])
+                one_match = TableFootballMatch(row[0], row[1], row[2])
                 all_matches.append(one_match)
         return all_matches
 
@@ -35,7 +34,7 @@ class TableFootballMatch:
                             teams_list[i][j] = player_to_check
                             player_found = True
 
-        if self.proper_time == False:
+        if not self.proper_time:
             mentor_who_acts = random.choice(observed_class.mentors)
 
             for players in teams_list:

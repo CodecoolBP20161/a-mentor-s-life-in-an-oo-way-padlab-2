@@ -1,5 +1,6 @@
 import csv
 
+
 class Exercise():
 
     def __init__(self, exercise_name, difficulty_level):
