@@ -36,3 +36,17 @@ class Student(Person):
                     self.energy_level += 50
                 else:
                     self.energy_level -= 100
+
+
+    @classmethod
+    def generate_list(cls, file_name):
+
+        list_of_students = []
+
+        with open('data/' + file_name) as csvfile:
+            all_students = csv.reader(csvfile)
+            for student in all_students:
+                student_object = Student(student[0], student[1])
+                list_of_students.append(student_object)
+
+        return list_of_students
