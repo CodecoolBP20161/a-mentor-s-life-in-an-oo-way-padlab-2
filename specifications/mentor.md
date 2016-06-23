@@ -70,6 +70,20 @@ student object
 
     None
 
+### ```generate_list```
+
+    Creates a list of mentors.
+
+#### Arguments
+
+    csv file
+
+#### Return value   
+
+    List of mentors.
+
+
+
 
 
 ## Static methods
