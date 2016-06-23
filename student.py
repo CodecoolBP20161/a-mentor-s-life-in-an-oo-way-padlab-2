@@ -47,7 +47,7 @@ class Student(Person):
         with open('data/' + file_name) as csvfile:
             all_students = csv.reader(csvfile)
             for student in all_students:
-                student_object = Student(student[0], student[1], student[2], student[3], student[4], student[5], student[6], student[7], student[8])
+                student_object = Student(student[0], student[1], int(student[2]), student[3], student[4], int(student[5]), bool(student[6]), int(student[7]), int(student[8]))
                 list_of_students.append(student_object)
 
         return list_of_students

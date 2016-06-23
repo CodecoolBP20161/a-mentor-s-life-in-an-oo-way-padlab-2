@@ -6,6 +6,7 @@ from tablefootball import TableFootballMatch
 from dojo import Dojo
 from project import Project
 import csv
+import random
 
 codecool_bp = CodecoolClass.generate_local()
 
@@ -15,9 +16,9 @@ all_mentors = codecool_bp.mentors
 all_matches = Match.generate_list('matches.csv')
 table_football_matches = TableFootballMatch.generate_list('tablefootball.csv')
 all_dojos = Dojo.generate_list('dojos.csv')
-all_projects = Projects.generate_list('projects.csv')
+all_projects = Project.generate_list('projects.csv')
 
-days_of_the_week = (Monday, Tuesday, Wednesday, Thursday, Friday)
+days_of_the_week = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday')
 
 # One week
 for day in days_of_the_week:
