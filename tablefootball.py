@@ -31,7 +31,7 @@ class TableFootballMatch:
                 player_found = False
                 while not player_found:
                     player_to_check = random.choice(observed_class.students)
-                    if player_to_check not in teams_list[0] and player_to_check not in team[1]:
+                    if player_to_check not in teams_list[0] and player_to_check not in teams_list[1]:
                         player = player_to_check
                         player_found = True
 

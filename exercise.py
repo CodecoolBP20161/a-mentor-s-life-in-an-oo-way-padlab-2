@@ -15,7 +15,7 @@ class Exercise():
         with open('data/' + file_name) as csvfile:
             all_exercises = csv.reader(csvfile)
             for exercise in all_exercises:
-                exercise_object = cls(exercise[0], exercise[1])
+                exercise_object = cls(exercise[0], int(exercise[1]))
                 list_of_exercises.append(exercise_object)
 
         return list_of_exercises
