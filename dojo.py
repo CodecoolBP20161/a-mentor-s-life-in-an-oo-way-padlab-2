@@ -1,18 +1,19 @@
 import random
+from exercise import Exercise
+import csv
 
 class Dojo(Exercise):
 
-    def __init__(self, exercise_name, difficulty_level, ):
+    def __init__(self, exercise_name, difficulty_level):
 
-        self.exercise_name = exercise_name
-        self.difficulty_level = difficulty_level
+        super().__init__(exercise_name, difficulty_level)
 
     def solved(self, student):
 
-        chance_to_solve = (float(self.difficulty_level) + float(student.knowledge_level)) / float(student.knowledge_level)
+        chance_to_solve =float(student.knowledge_level) / (float(self.difficulty_level) + float(student.knowledge_level))
         percent_according_to_knowledge = int(chance_to_solve*100)
         bad_luck_factor = random.randint(1, 100)
         if bad_luck_factor < percent_according_to_knowledge:
-            student.morale += self.difficulty_level
+            student.energy_level += self.difficulty_level
         else:
-            student.morale -= 100 - self.difficulty_level
+            student.energy_level -= 100 - self.difficulty_level

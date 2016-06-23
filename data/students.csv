@@ -1,10 +1,10 @@
-Adam, Ser, 1960, male, never, 6, true, 120, 200
-Levente, Gubik, 1970, male, only_interesting, 120, 200
-Bálint, Tóth, 1900, male, never, 120, 200
-András, Dóra, 2000, shemale, all_matches, 1, 200
-Dániel, Balogh, 1980, male, only_interesting, 120, 200
-Patrik, Vogronics, 1994, male, only_interesting, 120, 200
-Barbara, Ceglédi, 1911, female, never, 120, 200
-Vivien, Együd, 1912, female, never, 120, 200
-Pál, Matolay, 1899, male, only_interesting, 120, 200
-Anna, Kertész, 1990, female, all_matches, 120, 200
+Adam, Ser, 1960, male, never, 120, 1, 6, 200
+Levente, Gubik, 1970, male, only_interesting, 120, 1, 6, 200
+Bálint, Tóth, 1900, male, never, 120, 1, 6, 200
+András, Dóra, 2000, shemale, all_matches, 1, 1, 6, 200
+Dániel, Balogh, 1980, male, only_interesting, 120, 1, 6, 200
+Patrik, Vogronics, 1994, male, only_interesting, 120, 1, 6, 200
+Barbara, Ceglédi, 1911, female, never, 120, 1, 6, 200
+Vivien, Együd, 1912, female, never, 120, 1, 6, 200
+Pál, Matolay, 1899, male, only_interesting, 120, 1, 6, 200
+Anna, Kertész, 1990, female, all_matches, 120, 1, 6, 200

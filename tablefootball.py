@@ -1,6 +1,7 @@
 from mentor import Mentor
 from student import Student
 from person import Person
+import csv
 
 
 class TableFootballMatch:
@@ -46,7 +47,7 @@ class TableFootballMatch:
                 point = teams_list[team][0].table_football_level + teams_list[team][1].table_football_level
                 score.append(point)
 
-            if self.is_official = True:
+            if self.is_official == True:
                 moral_booster = 200
             else:
                 moral_booster = 100

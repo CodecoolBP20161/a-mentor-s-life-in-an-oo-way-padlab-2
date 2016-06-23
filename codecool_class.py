@@ -2,7 +2,7 @@ from mentor import Mentor
 from student import Student
 
 
-class CodecoolClass:
+class CodecoolClass():
     def __init__(self, location, year, mentors_csv, students_csv):
         self.location = location
         self.year = year
@@ -22,5 +22,5 @@ class CodecoolClass:
         raise ValueError("No mentor found by the given name")
 
     @classmethod
-    def generate_local():
-        return __init__("Budapest", 2016, "/data/mentors.csv", "/data/students.csv")
+    def generate_local(cls):
+        return CodecoolClass("Budapest", 2016, "mentors.csv", "students.csv")
