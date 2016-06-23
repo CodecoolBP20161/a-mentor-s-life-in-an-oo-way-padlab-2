@@ -24,16 +24,16 @@ class TableFootballMatch:
         return all_matches
 
     def played(self, observed_class):
-        teams_list = [[0, 0], [0, 0]]
+        teams_list = [[None, None], [None, None]]
 
-        for team in teams_list:
-            for player in team:
+        for i in range(0, 2):
+            for j in range(0, 2):
                 player_found = False
                 while not player_found:
                     player_to_check = random.choice(observed_class.students)
                     if player_to_check not in teams_list[0] and player_to_check not in teams_list[1]:
-                        player = player_to_check
-                        player_found = True
+                            teams_list[i][j] = player_to_check
+                            player_found = True
 
         if self.proper_time == False:
             mentor_who_acts = random.choice(observed_class.mentors)
@@ -48,7 +48,7 @@ class TableFootballMatch:
                 point = teams_list[team][0].table_football_level + teams_list[team][1].table_football_level
                 score.append(point)
 
-            if self.is_official == True:
+            if self.is_official:
                 moral_booster = 200
             else:
                 moral_booster = 100
