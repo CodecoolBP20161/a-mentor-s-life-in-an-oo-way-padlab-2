@@ -2,6 +2,7 @@ from mentor import Mentor
 from student import Student
 from person import Person
 import csv
+import random
 
 
 class TableFootballMatch:
@@ -22,20 +23,20 @@ class TableFootballMatch:
                 all_matches.append(one_match)
         return all_matches
 
-    def played(self):
+    def played(self, observed_class):
         teams_list = [[0, 0], [0, 0]]
 
         for team in teams_list:
             for player in team:
                 player_found = False
                 while not player_found:
-                    player_to_check = random.choice(codecool_bp.students)
+                    player_to_check = random.choice(observed_class.students)
                     if player_to_check not in teams_list[0] and player_to_check not in team[1]:
                         player = player_to_check
                         player_found = True
 
         if self.proper_time == False:
-            mentor_who_acts = random.choice(codecool_bp.mentors)
+            mentor_who_acts = random.choice(observed_class.mentors)
 
             for players in teams_list:
                 for player in players:
