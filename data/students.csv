@@ -1,10 +1,10 @@
-Adam,Ser,1960,he,never,120,1,7,200
-Levente,Gubik,1970,he,only_interesting,120,0,4,200
-Bálint,Tóth,1900,he,never,120,0,120,200
+Adam,Ser,1960,he,never,20,1,7,200
+Levente,Gubik,1970,he,only_interesting,85,0,4,200
+Bálint,Tóth,1900,he,never,80,0,120,200
 András,Dóra,2000,she,all_matches,1,0,0,200
-Dániel,Balogh,1980,he,only_interesting,120,1,6,200
-Patrik,Vogronics,1994,he,only_interesting,120,1,9,200
-Barbara,Ceglédi,1911,she,never,120,0,11,200
-Vivien,Együd,1912,she,never,120,1,11,200
-Pál,Matolay,1899,he,only_interesting,120,1,16,200
-Anna,Kertész,1990,she, all_matches,120,1,18,200
+Dániel,Balogh,1980,he,only_interesting,25,1,6,200
+Patrik,Vogronics,1994,he,only_interesting,15,1,9,200
+Barbara,Ceglédi,1911,she,never,20,0,11,200
+Vivien,Együd,1912,she,never,30,1,11,200
+Pál,Matolay,1899,he,only_interesting,50,1,16,200
+Anna,Kertész,1990,she, all_matches,40,1,18,200
