@@ -34,11 +34,16 @@ class TableFootballMatch:
                             teams_list[i][j] = player_to_check
                             player_found = True
 
+        next_line = input(teams_list[0][0].first_name + " and " + teams_list[0][1].first_name + " play a match against " + teams_list[1][0].first_name + " and " + teams_list[1][1].first_name)
+
         if not self.proper_time:
             mentor_who_acts = random.choice(observed_class.mentors)
+            next_line = input("They should not have tried that...they deserve a slap.")
 
             for players in teams_list:
                 mentor_who_acts.slap(players)
+
+            next_line = input("Now they know better when to play.")
 
         else:
             score = []
