@@ -25,25 +25,25 @@ days_of_the_week = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday')
 for day in days_of_the_week:
 
     # One day
-    print("It's " + day + ".")
+    next_line = input("\nIt's " + day + ".\n")
     match_of_yesterday = random.choice(all_matches)
     was_it_expected = bool(match_of_yesterday.expected_result)
     print("Yesterday there was a match: " + match_of_yesterday.match_name)
     if match_of_yesterday.important == True:
-        next_line = input("It was a really interesting match, a lot of students placed a bet on it.")
+        next_line = input("It was a really interesting match, a lot of students placed a bet on it.\n")
     else:
-        next_line = input("Only the addicted players placed a bet on that.")
+        next_line = input("Only the addicted players placed a bet on that.\n")
     for student in all_students:
         student.bet(match_of_yesterday, was_it_expected)
-    next_line = input("A few students seems to have a bad day...")
+    next_line = input("\nA few students seems to have a bad day...")
     random.choice(all_mentors).slap(Mentor.check_energy(all_students))
-    next_line = input("They deserved it.")
+    next_line = input("They deserved it.\n")
     for student in all_students:
         dojo_to_solve = random.choice(all_dojos)
         dojo_to_solve.solved(student)
-    next_line = input("Some students are so heavily affected by their lack of knowledge... and the hard time for them is just coming...")
+    next_line = input("\nSome students are so heavily affected by their lack of knowledge... and the hard time for them is just coming...")
     random.choice(all_mentors).slap(Mentor.check_energy(all_students))
-    next_line = input("Probably, they feel much better now.")
+    next_line = input("Probably, they feel much better now.\n")
     for events in range(3):
         played_table_football_match = random.choice(table_football_matches)
         played_table_football_match.played(observed_class)

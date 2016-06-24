@@ -8,8 +8,8 @@ import random
 class TableFootballMatch:
 
     def __init__(self, proper_time, is_official, players):
-        self.proper_time = bool(proper_time)
-        self.is_official = bool(is_official)
+        self.proper_time = bool(int(proper_time))
+        self.is_official = bool(int(is_official))
         self.players = int(players)
 
     @classmethod
@@ -38,7 +38,7 @@ class TableFootballMatch:
 
         if not self.proper_time:
             mentor_who_acts = random.choice(observed_class.mentors)
-            next_line = input("They should not have tried that...they deserve a slap.")
+            next_line = input("They should not have tried that...everyone else is studying. They deserve a slap.")
 
             for players in teams_list:
                 mentor_who_acts.slap(players)
@@ -57,11 +57,15 @@ class TableFootballMatch:
                 moral_booster = 100
 
             if score[0] > score[1]:
+                next_line = input(teams_list[0][0].first_name + " and " + teams_list[0][1].first_name + " defeated " + teams_list[1][0].first_name + " and " + teams_list[1][1].first_name)
+                next_line = input(teams_list[0][0].first_name + " and " + teams_list[0][1].first_name + " feel so much better. Their opponents cry. ")
                 teams_list[0][0].energy_level += moral_booster
                 teams_list[0][1].energy_level += moral_booster
                 teams_list[1][0].energy_level -= moral_booster
                 teams_list[1][1].energy_level -= moral_booster
             else:
+                next_line = input(teams_list[0][0].first_name + " and " + teams_list[0][1].first_name + " defeated " + teams_list[1][0].first_name + " and " + teams_list[1][1].first_name)
+                next_line = input(teams_list[0][0].first_name + " and " + teams_list[0][1].first_name + " feel so much better. Their opponents cry. ")
                 teams_list[1][0].energy_level += moral_booster
                 teams_list[1][1].energy_level += moral_booster
                 teams_list[0][0].energy_level -= moral_booster

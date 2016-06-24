@@ -16,3 +16,5 @@ class Project(Exercise):
 
         for student in list_of_students:
             student.knowledge_level = student.knowledge_level * ratio
+
+        next_line = input("\nAll the class worked together on project(" + self.exercise_name + "). Now they are much more clever.\n")

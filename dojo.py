@@ -19,4 +19,4 @@ class Dojo(Exercise):
             next_line = input(student.first_name + "'s gets happier, because he could solve a dojo.")
         else:
             student.energy_level -= 100-self.difficulty_level
-            next_line = input(student.first_name + "'s gets sadder, because he could solve a dojo.")
+            next_line = input(student.first_name + "'s gets sadder, because he could not solve a dojo.")
