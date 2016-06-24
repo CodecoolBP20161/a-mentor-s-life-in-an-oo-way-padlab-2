@@ -50,4 +50,9 @@ for day in days_of_the_week:
         actual_project = random.choice(all_projects)
         actual_project.worked_on(all_students)
     random.choice(all_mentors).teach(Mentor.check_knowledge(all_students))
-    Mentor.feedback(observed_class)
+    if day != 'Friday':
+        next_line = input("The day is over. A lot of students bet on the match of the day.")
+    else:
+        next_line = input("\nIt is feedback time!!!")
+        Mentor.feedback(observed_class)
+        print("\nThe week is over.")

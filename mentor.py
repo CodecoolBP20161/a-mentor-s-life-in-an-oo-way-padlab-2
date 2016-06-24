@@ -19,7 +19,7 @@ class Mentor(Person):
         for student in students:
             student.knowledge_level += 10
             student.energy_level -= 5
-            print (student.first_name + " got lectured about the current task! by " + self.nick_name)
+            print (student.first_name + " got lectured because they are a little left behind. by " + self.nick_name)
 
     @classmethod
     def feedback(cls, cc_class):

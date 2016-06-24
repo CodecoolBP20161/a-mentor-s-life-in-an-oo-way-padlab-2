@@ -38,7 +38,7 @@ class TableFootballMatch:
 
         if not self.proper_time:
             mentor_who_acts = random.choice(observed_class.mentors)
-            next_line = input("They should not have tried that...everyone else is studying. They deserve a slap.")
+            next_line = input("They should not have tried that...everyone else is studying. They deserve a slap.\n")
 
             for players in teams_list:
                 mentor_who_acts.slap(players)
