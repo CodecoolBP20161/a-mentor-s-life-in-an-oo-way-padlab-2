@@ -13,13 +13,13 @@ class Mentor(Person):
     def slap(self, students):
         for student in students:
             student.energy_level += 5*self.slap_rate
-            print (student.first_name + " slapped!:(")
+            print (student.first_name + " got slapped!:( by " + self.nick_name)
 
     def teach(self, students):
         for student in students:
             student.knowledge_level += 10
             student.energy_level -= 5
-            print (student.first_name + " got lectured about the current task!")
+            print (student.first_name + " got lectured about the current task! by " + self.nick_name)
 
     @classmethod
     def feedback(cls, cc_class):
@@ -53,6 +53,7 @@ class Mentor(Person):
         print ("The following students are a little behind in knowledge, according to the class average:")
         for dumby in dumbies:
             print (dumby.first_name + " " + dumby.last_name)
+        print ("Now they will get lectured!\n")
         return dumbies
 
     @staticmethod
@@ -68,4 +69,5 @@ class Mentor(Person):
         print ("The following students are not energised enough:")
         for lazy in lazies:
             print (lazy.first_name + " " + lazy.last_name)
+        print ("Now they will get slapped!:(\n")
         return lazies
