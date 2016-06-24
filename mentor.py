@@ -13,16 +13,19 @@ class Mentor(Person):
     def slap(self, students):
         for student in students:
             student.energy_level += 5*self.slap_rate
+            print (student.first_name + " slapped!:(")
 
     def teach(self, students):
         for student in students:
             student.knowledge_level += 10
             student.energy_level -= 5
+            print (student.first_name + " got lectured about the current task!")
 
     @classmethod
     def feedback(cls, cc_class):
         for student in cc_class.students:
             student.energy_level += 15
+            print (student.first_name + " you are awesome!")
 
     @classmethod
     def generate_list(cls, file_name):
@@ -47,6 +50,9 @@ class Mentor(Person):
         for student in students:
             if student.knowledge_level < avg_knowledge*0.9:
                 dumbies.append(student)
+        print ("The following students are a little behind in knowledge, according to the class average:")
+        for dumby in dumbies:
+            print (dumby.first_name + " " + dumby.last_name)
         return dumbies
 
     @staticmethod
@@ -59,4 +65,7 @@ class Mentor(Person):
         for student in students:
             if student.energy_level < avg_energy*0.9:
                 lazies.append(student)
+        print ("The following students are not energised enough:")
+        for lazy in lazies:
+            print (lazy.first_name + " " + lazy.last_name)
         return lazies
