@@ -10,7 +10,7 @@ class Student(Person):
         super().__init__(first_name, last_name, year, gender)
         self.depend_level = depend_level
         self.knowledge_level = int(knowledge_level)
-        self.is_bet_on_expected_result = bool(is_bet_on_expected_result)
+        self.is_bet_on_expected_result = bool(int(is_bet_on_expected_result))
         self.table_football_level = int(table_football_level)
         self.energy_level = int(energy_level)
 
@@ -19,25 +19,34 @@ class Student(Person):
             if self.depend_level == "never" or self.depend_level == "only_interesting":
                 if self.is_bet_on_expected_result == was_it_expected:
                     self.energy_level -= 50
+                    next_line = input(self.first_name + " is sad, because " + self.gender + " did not play, even tough " + self.gender + " knew the score.")
                 else:
                     self.energy_level += 20
+                    next_line = input(self.first_name + " is happy, because " + self.gender + " did not play, and " + self.gender + " had no idea whatsoever what was gonna happen on the match.")
+
             else:
                 if self.is_bet_on_expected_result == was_it_expected:
                     self.energy_level += 50
+                    next_line = input(self.first_name + " is happy, because " + self.gender + " won a lot of money.")
                 else:
                     self.energy_level -= 100
+                    next_line = input(self.first_name + " is sad, because " + self.gender + " lost a lot of money")
 
         if match.important:
             if self.depend_level == "never":
                 if self.is_bet_on_expected_result == was_it_expected:
                     self.energy_level -= 50
+                    next_line = input(self.first_name + " is sad, because " + self.gender + " did not play, even tough " + self.gender + " knew the score.")
                 else:
                     self.energy_level += 20
+                    next_line = input(self.first_name + " is happy, because " + self.gender + " did not play, and " + self.gender + " had no idea whatsoever what was gonna happen on the match.")
             else:
                 if self.is_bet_on_expected_result == was_it_expected:
                     self.energy_level += 50
+                    next_line = input(self.first_name + " is happy, because " + self.gender + " won a lot of money.")
                 else:
                     self.energy_level -= 100
+                    next_line = input(self.first_name + " is sad, because " + self.gender + " lost a lot of money")
 
     @classmethod
     def generate_list(cls, file_name):

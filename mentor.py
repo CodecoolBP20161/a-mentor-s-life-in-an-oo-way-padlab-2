@@ -1,5 +1,6 @@
 from person import Person
 import csv
+import random
 
 
 class Mentor(Person):
@@ -9,12 +10,14 @@ class Mentor(Person):
         self.slap_rate = int(slaprate)
         super().__init__(first_name, last_name, year, gender)
 
-    def slap(self, student):
-        student.energy_level += 5*self.slap_rate
+    def slap(self, students):
+        for student in students:
+            student.energy_level += 5*self.slap_rate
 
-    def teach(self, student):
-        student.knowledge_level += 10
-        student.energy_level -= 5
+    def teach(self, students):
+        for student in students:
+            student.knowledge_level += 10
+            student.energy_level -= 5
 
     @classmethod
     def feedback(cls, cc_class):
@@ -39,7 +42,7 @@ class Mentor(Person):
         summ_knowledge = 0
         for student in students:
             summ_knowledge += student.knowledge_level
-        avg_knowledge = summ_knowledge/students.length()
+        avg_knowledge = summ_knowledge/len(students)
         dumbies = []
         for student in students:
             if student.knowledge_level < avg_knowledge*0.9:
@@ -51,7 +54,7 @@ class Mentor(Person):
         summ_energy = 0
         for student in students:
             summ_energy += student.energy_level
-        avg_energy = summ_energy/students.length()
+        avg_energy = summ_energy/len(students)
         lazies = []
         for student in students:
             if student.energy_level < avg_energy*0.9:

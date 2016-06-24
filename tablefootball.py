@@ -38,8 +38,7 @@ class TableFootballMatch:
             mentor_who_acts = random.choice(observed_class.mentors)
 
             for players in teams_list:
-                for player in players:
-                    mentor_who_acts.slap(player)
+                mentor_who_acts.slap(players)
 
         else:
             score = []
